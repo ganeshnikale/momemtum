@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'momemtum';
+  navOpen:boolean = false;
+
+  toggleNav(){
+    this.navOpen =! this.navOpen;
+    console.log(this.navOpen);
+  }
 }

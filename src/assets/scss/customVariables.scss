@@ -1,0 +1,26 @@
+$primary: #052950;
+$secondary: #094B68;
+$tertiary: #107E8A;
+
+$daryGray: #595959;
+$mediumGray: #cccccc;
+$lightGray: #eeeeee;
+
+$darkBlue:#032950;
+$mediunBlue:#094a68;
+$lightBlue: #227e8a;
+
+$solidBtnColor:#0985c7;
+
+
+$outer-margin: 1.5rem;
+$grid-columns: 12;
+$gutter-width: 1.5rem;
+$outer-margin: 1.5rem;
+$breakpoints:
+  sm 48rem,
+  md 64rem,
+  lg 80rem,
+  xlg 90rem;
+
+$gutter-compensation: ($gutter-width * 0.5) * -1;

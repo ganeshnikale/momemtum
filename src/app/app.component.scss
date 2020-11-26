@@ -1,0 +1,131 @@
+@import "customMixins.scss";
+@import "customVariables.scss";
+$gradiantColors: $primary, $secondary;
+$gradiantColorsInverse:$secondary, $primary;
+header{
+    @include gradient($gradiantColors,horizontal);
+    padding:rem(20) rem(15);
+    margin-left:-$outer-margin;
+    margin-right:-$outer-margin;
+    .logoWrap{
+        color:$lightGray;
+        display: flex;
+        align-items: center;
+        @include font-size(30);
+        img{
+            margin-right:rem(15);
+        }
+    }
+
+    .headerRight{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        .userName{
+            color:$lightGray;
+            @include font-size(20);
+            border-right:1px solid $lightGray;
+            margin-right: rem(20);
+            padding-right: rem(20);
+        }
+        .actionIcons{
+            display: flex;
+            align-items: center;
+           
+            li{
+                width:50px;
+                .mat-icon{
+                    fill:$lightGray;
+                    color:$lightGray;
+                }
+                object.icon{
+                    width:100%;
+                    svg {
+                        fill:$lightGray;
+                        stroke: $lightGray;
+                         path.cls-1{
+                            fill:$lightGray;
+                        stroke: $lightGray;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+nav{
+    height: 100vh;
+    @include gradient($gradiantColors,horizontal);
+    width:rem(63);
+    margin: rem(5);
+    overflow: hidden;
+    @include transition($time:0.2s);
+    &.open{
+        width:rem(270);
+        ul.leftNavigation{
+            li{
+                a{
+                    .navText{
+                        
+                        display: block;
+                    }
+                }
+                &.navHeader{
+                   .icon{     
+                    @include rotate(180deg);
+                   }
+                }
+            }
+        }
+    }
+   ul.leftNavigation{
+       li{
+        padding-top:rem(15);
+        padding-bottom:rem(15);
+         a{
+             display: flex;
+             align-items: center;
+             text-decoration: none;
+             &:hover,&:visited,&:focus{
+                 text-decoration: none;
+             }
+             .icon{
+                 padding-left:rem(22);
+                 padding-right:rem(22);
+                color:$lightGray;
+            }
+               span.navText{
+                @include transition($time:0.2s);
+                color:$lightGray;
+                @include font-size(20);
+                display: none;
+               }
+         }
+         &.navHeader{
+            @include gradient($gradiantColorsInverse,horizontal);
+            a{
+                justify-content: flex-end;
+                .icon{
+                    @include transition($time:0.2s);
+                    padding-right: rem(12);
+                }
+            }
+         }
+       }
+   }
+}
+
+.flexi{
+    display: flex;
+    .col-auto{
+        flex-grow: 1;
+        margin-top: rem(40);
+        &.nav{
+            flex-grow: 0;
+            margin-top: rem(0);
+            margin-right: rem(15);
+        }
+    }
+}

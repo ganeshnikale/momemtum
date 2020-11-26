@@ -1,0 +1,98 @@
+@import "customMixins.scss";
+@import "customVariables.scss";
+.mat-expansion-panel{
+    margin-bottom: rem(20);
+    .mat-expansion-panel-header{
+        background-color: $primary;
+        @include font-size(15);
+       
+       
+        .mat-expansion-indicator::afte{
+            
+                color: #f00 !important;
+            
+        }
+        &.mat-expanded{
+            &:hover{
+                .mat-expansion-panel-header-title{
+                    color: $lightGray;
+                }
+                
+            }
+        }
+        &:hover{
+            .mat-expansion-panel-header-title{
+                color: $primary;
+            }
+        }
+    }
+}
+
+table.border{
+    width: 100%;
+    thead{
+        tr{
+            th{
+                color:$daryGray;
+                font-weight: 500;
+                @include font-size(18);
+                text-transform: capitalize;
+                text-align: left;
+                padding:rem(15);
+                &:nth-child(4), &:nth-child(5){
+                    text-align: right;
+                }
+                &:nth-child(3),&:nth-child(6){
+                    text-align: center;
+                }
+            }
+        }
+    }
+    tbody{
+        tr{
+            border-top:1px solid $lightGray;
+            td{
+                padding:rem(15);
+                @include font-size(15);
+                text-align: left;
+                .icon{
+                    color:$secondary;
+                }
+                &:first-child, &:nth-child(2){
+                    color:$secondary;
+                    text-transform: uppercase;
+                }
+                &:nth-child(4), &:nth-child(5){
+                    text-align: right;
+                }
+                &:nth-child(3), &:nth-child(6){
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+
+button.solidBtn{
+    color:$lightGray;
+    @include font-size(16);
+    text-transform: uppercase;
+    background-color: $solidBtnColor;
+    border: none;
+    padding: rem(15) rem(25);
+    margin-left: rem(15);
+    @include border-radius(0);
+    cursor: pointer;
+    font-weight: 600;
+    &:hover{
+        background-color: rgba($solidBtnColor, 90%);
+    }
+    &:focus{
+        outline: none;
+    }
+}
+
+.mat-expansion-panel-header-title{
+    color: $lightGray;
+}

@@ -13,6 +13,7 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -23,6 +24,11 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/assets/scss"
+              ]
+            },
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -30,6 +36,7 @@
             "styles": [
               "src/styles.scss"
             ],
+
             "scripts": []
           },
           "configurations": {
@@ -123,6 +130,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "momemtum"
+    }
+  },
+  "defaultProject": "momemtum",
+  "cli": {
+    "analytics": "ecc3a1a7-9dc8-46a0-bca9-b8e6b1f8c74d"
+  }
 }
